@@ -132,8 +132,12 @@ const MediaControls = (props: Props) => {
     });
   };
 
+  const triggetControls = () => {
+    onPause();
+  };
+
   return (
-    <TouchableWithoutFeedback accessible={false} onPress={toggleControls}>
+    <TouchableWithoutFeedback accessible={false} onPress={triggetControls}>
       <Animated.View style={[styles.container, { opacity }]}>
         {isVisible && (
           <View style={[styles.container, customContainerStyle]}>
